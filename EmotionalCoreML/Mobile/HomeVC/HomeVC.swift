@@ -31,7 +31,8 @@ class HomeVC: UIViewController {
                     fatalError("celil")
             }
             
-            self?.resultLabel.text = "\(Int(topResult.confidence * 100)) "
+            self?.resultLabel.text = "\(Int(topResult.confidence * 100)) + \(topResult.identifier.description) "
+            
         }
     }
     
