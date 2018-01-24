@@ -12,7 +12,9 @@ import Vision
 
 class HomeVC: UIViewController {
     
+    @IBOutlet weak var cameraImage: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
+    
     let model = CNNEmotions()
     var request : VNCoreMLRequest?
     var image : UIImage!
@@ -35,12 +37,11 @@ class HomeVC: UIViewController {
             
         }
     }
-    
 }
 
 //MARK: Buttons
 extension HomeVC {
-    @IBAction func analyzeButtonClicked(_ sender: UIButton) {
+    @IBAction func takePictureButtonClicked(_ sender: UIButton) {
         analyze(image: image)
     }
 }
