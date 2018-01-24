@@ -23,7 +23,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         image = #imageLiteral(resourceName: "celil.jpeg")
-        imagePicker.delegate = self
+        imagePickerSetup()
         
         guard let visionModel = try? VNCoreMLModel(for: model.model) else {
             fatalError("error")
@@ -41,10 +41,18 @@ class HomeVC: UIViewController {
     }
 }
 
+extension HomeVC {
+    fileprivate func imagePickerSetup() {
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+        imagePicker.allowsEditing = false
+    }
+}
+
 //MARK: Buttons
 extension HomeVC {
     @IBAction func takePictureButtonClicked(_ sender: UIButton) {
-        analyze(image: image)
+        present(imagePicker, animated: true, completion: nil)
     }
 }
 
@@ -62,12 +70,11 @@ extension HomeVC {
 
 //MARK: ImagePicker Delegations
 extension HomeVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    private func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            cameraImage.image = pickedImage
+            analyze(image: pickedImage)
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
 }
