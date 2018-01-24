@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1625CCE720192C1F00BA50F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625CCE620192C1F00BA50F4 /* AppDelegate.swift */; };
-		1625CCF120192C1F00BA50F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1625CCF020192C1F00BA50F4 /* Assets.xcassets */; };
 		1625CCF420192C1F00BA50F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1625CCF220192C1F00BA50F4 /* LaunchScreen.storyboard */; };
 		1625CCFF20192C1F00BA50F4 /* EmotionalCoreMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625CCFE20192C1F00BA50F4 /* EmotionalCoreMLTests.swift */; };
 		1625CD0A20192C1F00BA50F4 /* EmotionalCoreMLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625CD0920192C1F00BA50F4 /* EmotionalCoreMLUITests.swift */; };
 		1625CD1D20192ED200BA50F4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625CD1B20192ED200BA50F4 /* HomeVC.swift */; };
 		1625CD1E20192ED200BA50F4 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1625CD1C20192ED200BA50F4 /* HomeVC.xib */; };
+		1625CD20201931ED00BA50F4 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1625CD1F201931ED00BA50F4 /* Asset.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		1625CCE320192C1F00BA50F4 /* EmotionalCoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionalCoreML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1625CCE620192C1F00BA50F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1625CCF020192C1F00BA50F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1625CCF320192C1F00BA50F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1625CCF520192C1F00BA50F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1625CCFA20192C1F00BA50F4 /* EmotionalCoreMLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionalCoreMLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +46,7 @@
 		1625CD0B20192C1F00BA50F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1625CD1B20192ED200BA50F4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		1625CD1C20192ED200BA50F4 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		1625CD1F201931ED00BA50F4 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				1625CCF220192C1F00BA50F4 /* LaunchScreen.storyboard */,
-				1625CCF020192C1F00BA50F4 /* Assets.xcassets */,
+				1625CD1F201931ED00BA50F4 /* Asset.xcassets */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -264,9 +264,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1625CD20201931ED00BA50F4 /* Asset.xcassets in Resources */,
 				1625CCF420192C1F00BA50F4 /* LaunchScreen.storyboard in Resources */,
 				1625CD1E20192ED200BA50F4 /* HomeVC.xib in Resources */,
-				1625CCF120192C1F00BA50F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
