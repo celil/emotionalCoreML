@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="EmotionalCoreML" customModuleProvider="target">
             <connections>
+                <outlet property="cameraImage" destination="8co-kD-cis" id="0J9-ou-grd"/>
+                <outlet property="resultLabel" destination="4v7-fa-ORH" id="pQg-ZA-JQg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,7 +21,45 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8co-kD-cis">
+                    <rect key="frame" x="20" y="30" width="335" height="335"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="8co-kD-cis" secondAttribute="height" multiplier="1:1" id="hoB-Lq-mmE"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnG-TH-ZIA">
+                    <rect key="frame" x="87.5" y="396" width="200" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ZxV-4j-haI"/>
+                        <constraint firstAttribute="width" constant="200" id="kSU-Rm-CTr"/>
+                    </constraints>
+                    <state key="normal" title="Take a Picture"/>
+                    <connections>
+                        <action selector="takePictureButtonClicked:" destination="-1" eventType="touchUpInside" id="hBk-jh-NAD"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v7-fa-ORH">
+                    <rect key="frame" x="20" y="456" width="335" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="y8f-po-Ddy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8co-kD-cis" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="E4c-ru-i91"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4v7-fa-ORH" secondAttribute="trailing" constant="20" id="H8H-QC-tBN"/>
+                <constraint firstItem="QnG-TH-ZIA" firstAttribute="centerX" secondItem="8co-kD-cis" secondAttribute="centerX" id="PDt-pY-lr0"/>
+                <constraint firstItem="4v7-fa-ORH" firstAttribute="top" secondItem="QnG-TH-ZIA" secondAttribute="bottom" constant="30" id="SVb-Nq-a1U"/>
+                <constraint firstItem="4v7-fa-ORH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dEB-aO-CfX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8co-kD-cis" secondAttribute="trailing" constant="20" id="ga9-LO-JeY"/>
+                <constraint firstItem="QnG-TH-ZIA" firstAttribute="top" secondItem="8co-kD-cis" secondAttribute="bottom" constant="31" id="qdn-Rv-9wn"/>
+                <constraint firstItem="8co-kD-cis" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rUs-CN-YNS"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
