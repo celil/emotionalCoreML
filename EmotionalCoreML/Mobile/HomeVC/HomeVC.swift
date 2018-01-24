@@ -12,7 +12,9 @@ import Vision
 
 class HomeVC: UIViewController {
     
+    @IBOutlet weak var cameraImage: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
+    
     let model = CNNEmotions()
     var request : VNCoreMLRequest?
     var image : UIImage!
