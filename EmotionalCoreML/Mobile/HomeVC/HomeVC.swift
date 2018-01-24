@@ -36,12 +36,11 @@ class HomeVC: UIViewController {
             self?.resultLabel.text = "\(Int(topResult.confidence * 100)) "
         }
     }
-    
 }
 
 //MARK: Buttons
 extension HomeVC {
-    @IBAction func analyzeButtonClicked(_ sender: UIButton) {
+    @IBAction func takePictureButtonClicked(_ sender: UIButton) {
         analyze(image: image)
     }
 }

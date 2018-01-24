@@ -34,9 +34,9 @@
                         <constraint firstAttribute="height" constant="30" id="ZxV-4j-haI"/>
                         <constraint firstAttribute="width" constant="200" id="kSU-Rm-CTr"/>
                     </constraints>
-                    <state key="normal" title="Analyze"/>
+                    <state key="normal" title="Take a Picture"/>
                     <connections>
-                        <action selector="analyzeButtonClicked:" destination="-1" eventType="touchUpInside" id="C9w-vT-r68"/>
+                        <action selector="takePictureButtonClicked:" destination="-1" eventType="touchUpInside" id="hBk-jh-NAD"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v7-fa-ORH">
