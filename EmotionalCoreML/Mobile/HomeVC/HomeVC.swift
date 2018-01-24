@@ -18,10 +18,12 @@ class HomeVC: UIViewController {
     let model = CNNEmotions()
     var request : VNCoreMLRequest?
     var image : UIImage!
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         image = #imageLiteral(resourceName: "celil.jpeg")
+        imagePicker.delegate = self
         
         guard let visionModel = try? VNCoreMLModel(for: model.model) else {
             fatalError("error")
@@ -54,6 +56,18 @@ extension HomeVC {
         }
         let handler = VNImageRequestHandler(cgImage: image.cgImage!)
         try? handler.perform([request])
+        
+    }
+}
+
+//MARK: ImagePicker Delegations
+extension HomeVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
     }
 }
