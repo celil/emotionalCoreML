@@ -14,11 +14,10 @@
 		1625CD1D20192ED200BA50F4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625CD1B20192ED200BA50F4 /* HomeVC.swift */; };
 		1625CD1E20192ED200BA50F4 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1625CD1C20192ED200BA50F4 /* HomeVC.xib */; };
 		1625CD20201931ED00BA50F4 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1625CD1F201931ED00BA50F4 /* Asset.xcassets */; };
-		1625CD262019372700BA50F4 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1625CD252019372700BA50F4 /* CNNEmotions.mlmodel */; };
+		1676BA4B201D3BE70009972E /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1676BA4A201D3BE70009972E /* MobileNet.mlmodel */; };
 		2F43A8711E1552D43D50D025 /* Pods_EmotionalCoreMLUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D77ECDC10B7CA837998C03A /* Pods_EmotionalCoreMLUITests.framework */; };
-		5C0AFC4E201943A200C857AC /* celil.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5C0AFC4D201943A200C857AC /* celil.jpeg */; };
 		5C12226FCA6C25E1D4DB3086 /* Pods_EmotionalCoreMLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D36BC34A599BD870028AFB7 /* Pods_EmotionalCoreMLTests.framework */; };
-		88D0C886CAB7B9EBA543426B /* Pods_EmotionalCoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EEFE9AF0EA5716D77434CC /* Pods_EmotionalCoreML.framework */; };
+		5CF6B004201D36FA0089F73C /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6B003201D36FA0089F73C /* UIImage+CVPixelBuffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +52,12 @@
 		1625CD1B20192ED200BA50F4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		1625CD1C20192ED200BA50F4 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		1625CD1F201931ED00BA50F4 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
-		1625CD252019372700BA50F4 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = CoreMLModel/CNNEmotions.mlmodel; sourceTree = SOURCE_ROOT; };
+		1676BA4A201D3BE70009972E /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		2BDFB535FBD85450AD74200E /* Pods-EmotionalCoreML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreML.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreML/Pods-EmotionalCoreML.release.xcconfig"; sourceTree = "<group>"; };
 		300FFDD276900E0CA650C0B9 /* Pods-EmotionalCoreMLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreMLUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreMLUITests/Pods-EmotionalCoreMLUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		36F21FCE3AF14D6A76CA8BEC /* Pods-EmotionalCoreMLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreMLTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreMLTests/Pods-EmotionalCoreMLTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D36BC34A599BD870028AFB7 /* Pods_EmotionalCoreMLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionalCoreMLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C0AFC4D201943A200C857AC /* celil.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = celil.jpeg; sourceTree = "<group>"; };
+		5CF6B003201D36FA0089F73C /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
 		7B1E4B7641D28F7F6FEA339E /* Pods-EmotionalCoreMLUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreMLUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreMLUITests/Pods-EmotionalCoreMLUITests.release.xcconfig"; sourceTree = "<group>"; };
 		914096FBBC2EEFD3785C707D /* Pods-EmotionalCoreMLTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreMLTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreMLTests/Pods-EmotionalCoreMLTests.release.xcconfig"; sourceTree = "<group>"; };
 		92EEFE9AF0EA5716D77434CC /* Pods_EmotionalCoreML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionalCoreML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88D0C886CAB7B9EBA543426B /* Pods_EmotionalCoreML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +128,7 @@
 			children = (
 				1625CD1720192E7E00BA50F4 /* Core */,
 				1625CD1820192E8800BA50F4 /* Mobile */,
+				5CF6B001201D36BC0089F73C /* Helpers */,
 				1625CD1920192E9100BA50F4 /* Source */,
 				1625CCE620192C1F00BA50F4 /* AppDelegate.swift */,
 				1625CCF520192C1F00BA50F4 /* Info.plist */,
@@ -173,8 +172,7 @@
 		1625CD1920192E9100BA50F4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				5C0AFC4D201943A200C857AC /* celil.jpeg */,
-				1625CD252019372700BA50F4 /* CNNEmotions.mlmodel */,
+				1676BA4A201D3BE70009972E /* MobileNet.mlmodel */,
 				1625CCF220192C1F00BA50F4 /* LaunchScreen.storyboard */,
 				1625CD1F201931ED00BA50F4 /* Asset.xcassets */,
 			);
@@ -188,6 +186,22 @@
 				1625CD1C20192ED200BA50F4 /* HomeVC.xib */,
 			);
 			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		5CF6B001201D36BC0089F73C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5CF6B002201D36CC0089F73C /* Extensisons */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5CF6B002201D36CC0089F73C /* Extensisons */ = {
+			isa = PBXGroup;
+			children = (
+				5CF6B003201D36FA0089F73C /* UIImage+CVPixelBuffer.swift */,
+			);
+			path = Extensisons;
 			sourceTree = "<group>";
 		};
 		D96239EDF8210C97D3611ED6 /* Pods */ = {
@@ -210,12 +224,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1625CD0E20192C1F00BA50F4 /* Build configuration list for PBXNativeTarget "EmotionalCoreML" */;
 			buildPhases = (
-				B87B107E4DDA03889FDD7975 /* [CP] Check Pods Manifest.lock */,
 				1625CCDF20192C1F00BA50F4 /* Sources */,
 				1625CCE020192C1F00BA50F4 /* Frameworks */,
 				1625CCE120192C1F00BA50F4 /* Resources */,
-				8C18DA476A1276749E05ADDD /* [CP] Embed Pods Frameworks */,
-				72C9217D8E3BC028B927D2E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,7 +333,6 @@
 				1625CD20201931ED00BA50F4 /* Asset.xcassets in Resources */,
 				1625CCF420192C1F00BA50F4 /* LaunchScreen.storyboard in Resources */,
 				1625CD1E20192ED200BA50F4 /* HomeVC.xib in Resources */,
-				5C0AFC4E201943A200C857AC /* celil.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,21 +389,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		72C9217D8E3BC028B927D2E4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionalCoreML/Pods-EmotionalCoreML-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8A3B95B980F167B7C46A5969 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,24 +404,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionalCoreMLUITests/Pods-EmotionalCoreMLUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C18DA476A1276749E05ADDD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EmotionalCoreML/Pods-EmotionalCoreML-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/TesseractOCRiOS/TesseractOCR.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TesseractOCR.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionalCoreML/Pods-EmotionalCoreML-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9E6F16F1CEAB00766D0C6A7B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,24 +417,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionalCoreMLUITests/Pods-EmotionalCoreMLUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B87B107E4DDA03889FDD7975 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EmotionalCoreML-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB0A4589B25FB201E5CB1317 /* [CP] Embed Pods Frameworks */ = {
@@ -497,8 +456,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1625CD262019372700BA50F4 /* CNNEmotions.mlmodel in Sources */,
+				1676BA4B201D3BE70009972E /* MobileNet.mlmodel in Sources */,
 				1625CCE720192C1F00BA50F4 /* AppDelegate.swift in Sources */,
+				5CF6B004201D36FA0089F73C /* UIImage+CVPixelBuffer.swift in Sources */,
 				1625CD1D20192ED200BA50F4 /* HomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,6 +618,7 @@
 			baseConfigurationReference = 016EC65509C66BE189FCFDFB /* Pods-EmotionalCoreML.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G6N3C3LBE;
 				INFOPLIST_FILE = EmotionalCoreML/Info.plist;
@@ -665,6 +626,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = celilbozkurt.coreML;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -675,6 +637,7 @@
 			baseConfigurationReference = 2BDFB535FBD85450AD74200E /* Pods-EmotionalCoreML.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G6N3C3LBE;
 				INFOPLIST_FILE = EmotionalCoreML/Info.plist;
@@ -682,6 +645,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = celilbozkurt.coreML;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
