@@ -71,10 +71,11 @@ extension HomeVC {
         guard let prediction = try? model.prediction(data: image) else {
             return
         }
-        resultLabel.text = prediction.classLabel
-        print(prediction.classLabel)
-        print(prediction.prob)
        
+        print(prediction.classLabel)
+        let value = prediction.prob.max{a, b in a.value < b.value}!.value * 100
+        
+        resultLabel.text = "\(prediction.classLabel) \(String(format: "%.2f", value))%"
     }
 }
 
