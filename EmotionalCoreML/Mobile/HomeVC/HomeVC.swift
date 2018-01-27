@@ -17,12 +17,10 @@ class HomeVC: UIViewController {
     
     let model = MobileNet()
     var request : VNCoreMLRequest?
-    var image : UIImage!
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        image = #imageLiteral(resourceName: "celil.jpeg")
         imagePickerSetup()
         
         guard let visionModel = try? VNCoreMLModel(for: model.model) else {
