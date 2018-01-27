@@ -14,11 +14,10 @@
 		1625CD1D20192ED200BA50F4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1625CD1B20192ED200BA50F4 /* HomeVC.swift */; };
 		1625CD1E20192ED200BA50F4 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1625CD1C20192ED200BA50F4 /* HomeVC.xib */; };
 		1625CD20201931ED00BA50F4 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1625CD1F201931ED00BA50F4 /* Asset.xcassets */; };
+		1676BA4B201D3BE70009972E /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1676BA4A201D3BE70009972E /* MobileNet.mlmodel */; };
 		2F43A8711E1552D43D50D025 /* Pods_EmotionalCoreMLUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D77ECDC10B7CA837998C03A /* Pods_EmotionalCoreMLUITests.framework */; };
-		5C0AFC4E201943A200C857AC /* celil.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5C0AFC4D201943A200C857AC /* celil.jpeg */; };
 		5C12226FCA6C25E1D4DB3086 /* Pods_EmotionalCoreMLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D36BC34A599BD870028AFB7 /* Pods_EmotionalCoreMLTests.framework */; };
 		5CF6B004201D36FA0089F73C /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6B003201D36FA0089F73C /* UIImage+CVPixelBuffer.swift */; };
-		5CF6B006201D372C0089F73C /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6B005201D372C0089F73C /* MobileNet.mlmodel */; };
 		88D0C886CAB7B9EBA543426B /* Pods_EmotionalCoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EEFE9AF0EA5716D77434CC /* Pods_EmotionalCoreML.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,13 +53,12 @@
 		1625CD1B20192ED200BA50F4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		1625CD1C20192ED200BA50F4 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		1625CD1F201931ED00BA50F4 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
+		1676BA4A201D3BE70009972E /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		2BDFB535FBD85450AD74200E /* Pods-EmotionalCoreML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreML.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreML/Pods-EmotionalCoreML.release.xcconfig"; sourceTree = "<group>"; };
 		300FFDD276900E0CA650C0B9 /* Pods-EmotionalCoreMLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreMLUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreMLUITests/Pods-EmotionalCoreMLUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		36F21FCE3AF14D6A76CA8BEC /* Pods-EmotionalCoreMLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreMLTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreMLTests/Pods-EmotionalCoreMLTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D36BC34A599BD870028AFB7 /* Pods_EmotionalCoreMLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionalCoreMLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C0AFC4D201943A200C857AC /* celil.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = celil.jpeg; sourceTree = "<group>"; };
 		5CF6B003201D36FA0089F73C /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
-		5CF6B005201D372C0089F73C /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MobileNet.mlmodel; path = CoreMLModel/MobileNet.mlmodel; sourceTree = SOURCE_ROOT; };
 		7B1E4B7641D28F7F6FEA339E /* Pods-EmotionalCoreMLUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreMLUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreMLUITests/Pods-EmotionalCoreMLUITests.release.xcconfig"; sourceTree = "<group>"; };
 		914096FBBC2EEFD3785C707D /* Pods-EmotionalCoreMLTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreMLTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreMLTests/Pods-EmotionalCoreMLTests.release.xcconfig"; sourceTree = "<group>"; };
 		92EEFE9AF0EA5716D77434CC /* Pods_EmotionalCoreML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionalCoreML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,8 +174,7 @@
 		1625CD1920192E9100BA50F4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				5CF6B005201D372C0089F73C /* MobileNet.mlmodel */,
-				5C0AFC4D201943A200C857AC /* celil.jpeg */,
+				1676BA4A201D3BE70009972E /* MobileNet.mlmodel */,
 				1625CCF220192C1F00BA50F4 /* LaunchScreen.storyboard */,
 				1625CD1F201931ED00BA50F4 /* Asset.xcassets */,
 			);
@@ -341,7 +338,6 @@
 				1625CD20201931ED00BA50F4 /* Asset.xcassets in Resources */,
 				1625CCF420192C1F00BA50F4 /* LaunchScreen.storyboard in Resources */,
 				1625CD1E20192ED200BA50F4 /* HomeVC.xib in Resources */,
-				5C0AFC4E201943A200C857AC /* celil.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,7 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CF6B006201D372C0089F73C /* MobileNet.mlmodel in Sources */,
+				1676BA4B201D3BE70009972E /* MobileNet.mlmodel in Sources */,
 				1625CCE720192C1F00BA50F4 /* AppDelegate.swift in Sources */,
 				5CF6B004201D36FA0089F73C /* UIImage+CVPixelBuffer.swift in Sources */,
 				1625CD1D20192ED200BA50F4 /* HomeVC.swift in Sources */,
