@@ -9,6 +9,7 @@
 import UIKit
 import CoreML
 import Vision
+import TesseractOCR
 
 class HomeVC: UIViewController {
     
@@ -66,15 +67,49 @@ extension HomeVC {
         try? handler.perform([request])
         
     }
+    
+    fileprivate func ocr(image: UIImage) {
+        if let tesseract = G8Tesseract(language: "eng") {
+            tesseract.engineMode = .tesseractCubeCombined
+            tesseract.pageSegmentationMode = .auto
+            tesseract.image = image.g8_blackAndWhite()
+            tesseract.recognize()
+            print(tesseract.recognizedText)
+            resultLabel.text = tesseract.recognizedText
+        }
+    }
 }
 
 //MARK: ImagePicker Delegations
 extension HomeVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            cameraImage.image = pickedImage
-            analyze(image: pickedImage)
+            cameraImage.image = pickedImage.scaleImage(640)
+            ocr(image: pickedImage.scaleImage(640)!)
         }
         picker.dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - UIImage extension
+extension UIImage {
+    func scaleImage(_ maxDimension: CGFloat) -> UIImage? {
+        
+        var scaledSize = CGSize(width: maxDimension, height: maxDimension)
+        
+        if size.width > size.height {
+            let scaleFactor = size.height / size.width
+            scaledSize.height = scaledSize.width * scaleFactor
+        } else {
+            let scaleFactor = size.width / size.height
+            scaledSize.width = scaledSize.height * scaleFactor
+        }
+        
+        UIGraphicsBeginImageContext(scaledSize)
+        draw(in: CGRect(origin: .zero, size: scaledSize))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return scaledImage
     }
 }

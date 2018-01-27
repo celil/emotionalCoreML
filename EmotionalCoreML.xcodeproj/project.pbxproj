@@ -15,6 +15,10 @@
 		1625CD1E20192ED200BA50F4 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1625CD1C20192ED200BA50F4 /* HomeVC.xib */; };
 		1625CD20201931ED00BA50F4 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1625CD1F201931ED00BA50F4 /* Asset.xcassets */; };
 		1625CD262019372700BA50F4 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1625CD252019372700BA50F4 /* CNNEmotions.mlmodel */; };
+		1676BA37201BAF9C0009972E /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1676BA38201BAF9C0009972E /* TesseractOCR.framework */; };
+		1676BA3A201BB07B0009972E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1676BA39201BB07A0009972E /* libstdc++.tbd */; };
+		1676BA3E201BB2E70009972E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1676BA3D201BB2E70009972E /* libz.tbd */; };
+		1676BA40201BB3B90009972E /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 1676BA3F201BB3B90009972E /* tessdata */; };
 		2F43A8711E1552D43D50D025 /* Pods_EmotionalCoreMLUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D77ECDC10B7CA837998C03A /* Pods_EmotionalCoreMLUITests.framework */; };
 		5C0AFC4E201943A200C857AC /* celil.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5C0AFC4D201943A200C857AC /* celil.jpeg */; };
 		5C12226FCA6C25E1D4DB3086 /* Pods_EmotionalCoreMLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D36BC34A599BD870028AFB7 /* Pods_EmotionalCoreMLTests.framework */; };
@@ -54,6 +58,10 @@
 		1625CD1C20192ED200BA50F4 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		1625CD1F201931ED00BA50F4 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		1625CD252019372700BA50F4 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = CoreMLModel/CNNEmotions.mlmodel; sourceTree = SOURCE_ROOT; };
+		1676BA38201BAF9C0009972E /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1676BA39201BB07A0009972E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		1676BA3D201BB2E70009972E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1676BA3F201BB3B90009972E /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		2BDFB535FBD85450AD74200E /* Pods-EmotionalCoreML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreML.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreML/Pods-EmotionalCoreML.release.xcconfig"; sourceTree = "<group>"; };
 		300FFDD276900E0CA650C0B9 /* Pods-EmotionalCoreMLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreMLUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreMLUITests/Pods-EmotionalCoreMLUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		36F21FCE3AF14D6A76CA8BEC /* Pods-EmotionalCoreMLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalCoreMLTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionalCoreMLTests/Pods-EmotionalCoreMLTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1676BA3E201BB2E70009972E /* libz.tbd in Frameworks */,
+				1676BA3A201BB07B0009972E /* libstdc++.tbd in Frameworks */,
+				1676BA37201BAF9C0009972E /* TesseractOCR.framework in Frameworks */,
 				88D0C886CAB7B9EBA543426B /* Pods_EmotionalCoreML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +107,9 @@
 		0FDE82C8583B1A4DD28B642A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1676BA3D201BB2E70009972E /* libz.tbd */,
+				1676BA39201BB07A0009972E /* libstdc++.tbd */,
+				1676BA38201BAF9C0009972E /* TesseractOCR.framework */,
 				92EEFE9AF0EA5716D77434CC /* Pods_EmotionalCoreML.framework */,
 				4D36BC34A599BD870028AFB7 /* Pods_EmotionalCoreMLTests.framework */,
 				9D77ECDC10B7CA837998C03A /* Pods_EmotionalCoreMLUITests.framework */,
@@ -132,6 +146,7 @@
 				1625CD1820192E8800BA50F4 /* Mobile */,
 				1625CD1920192E9100BA50F4 /* Source */,
 				1625CCE620192C1F00BA50F4 /* AppDelegate.swift */,
+				1676BA3F201BB3B90009972E /* tessdata */,
 				1625CCF520192C1F00BA50F4 /* Info.plist */,
 			);
 			path = EmotionalCoreML;
@@ -321,6 +336,7 @@
 			files = (
 				1625CD20201931ED00BA50F4 /* Asset.xcassets in Resources */,
 				1625CCF420192C1F00BA50F4 /* LaunchScreen.storyboard in Resources */,
+				1676BA40201BB3B90009972E /* tessdata in Resources */,
 				1625CD1E20192ED200BA50F4 /* HomeVC.xib in Resources */,
 				5C0AFC4E201943A200C857AC /* celil.jpeg in Resources */,
 			);
@@ -660,6 +676,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G6N3C3LBE;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EmotionalCoreML/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -677,6 +694,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G6N3C3LBE;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EmotionalCoreML/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
