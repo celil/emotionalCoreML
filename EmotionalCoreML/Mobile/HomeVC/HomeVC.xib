@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8co-kD-cis">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8co-kD-cis">
                     <rect key="frame" x="20" y="30" width="335" height="335"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="8co-kD-cis" secondAttribute="height" multiplier="1:1" id="hoB-Lq-mmE"/>
@@ -39,10 +39,10 @@
                         <action selector="takePictureButtonClicked:" destination="-1" eventType="touchUpInside" id="hBk-jh-NAD"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v7-fa-ORH">
-                    <rect key="frame" x="20" y="456" width="335" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v7-fa-ORH">
+                    <rect key="frame" x="20" y="456" width="335" height="169"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="y8f-po-Ddy"/>
+                        <constraint firstAttribute="height" constant="169" id="y8f-po-Ddy"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -61,6 +61,7 @@
                 <constraint firstItem="8co-kD-cis" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rUs-CN-YNS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="65.5"/>
         </view>
     </objects>
 </document>
