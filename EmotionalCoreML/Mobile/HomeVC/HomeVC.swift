@@ -15,7 +15,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var cameraImage: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
     
-    let model = CNNEmotions()
+    let model = MobileNet()
     var request : VNCoreMLRequest?
     var image : UIImage!
     let imagePicker = UIImagePickerController()
@@ -66,6 +66,17 @@ extension HomeVC {
         try? handler.perform([request])
         
     }
+    
+    fileprivate func ml(image: CVPixelBuffer){
+        guard let prediction = try? model.prediction(data: image) else {
+            return
+        }
+       
+        print(prediction.classLabel)
+        let value = prediction.prob.max{a, b in a.value < b.value}!.value * 100
+        
+        resultLabel.text = "\(prediction.classLabel) \(String(format: "%.2f", value))%"
+    }
 }
 
 //MARK: ImagePicker Delegations
@@ -73,8 +84,41 @@ extension HomeVC: UIImagePickerControllerDelegate, UINavigationControllerDelegat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             cameraImage.image = pickedImage
-            analyze(image: pickedImage)
+            buffer(image: pickedImage)
         }
         picker.dismiss(animated: true, completion: nil)
+    }
+}
+
+//MARK: Helpers
+extension HomeVC {
+    fileprivate func buffer(image: UIImage) {
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 224, height: 224), true, 2.0)
+        image.draw(in: CGRect(x: 0, y: 0, width: 224, height: 224))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
+        var pixelBuffer : CVPixelBuffer?
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(newImage.size.width), Int(newImage.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
+        guard (status == kCVReturnSuccess) else {
+            return
+        }
+        
+        CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+        let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
+        
+        let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+        let context = CGContext(data: pixelData, width: Int(newImage.size.width), height: Int(newImage.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue) //3
+        
+        context?.translateBy(x: 0, y: newImage.size.height)
+        context?.scaleBy(x: 1.0, y: -1.0)
+        
+        UIGraphicsPushContext(context!)
+        newImage.draw(in: CGRect(x: 0, y: 0, width: newImage.size.width, height: newImage.size.height))
+        UIGraphicsPopContext()
+        CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+        
+        ml(image: pixelBuffer!)
     }
 }
